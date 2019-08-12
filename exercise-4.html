@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let leng = parseInt(prompt("Enter the length"));
+    let i;
+    let reversed = new Array(leng);
+
+
+    for (i = 0; i < leng; i++) {
+        array[i] = Math.round(Math.random() * 100);
+
+
+    }
+    let lastarray = array.length - 1;
+    for (i = 0; i < leng; i++) {
+        reversed[i] = array[lastarray];
+        lastarray--;
+
+
+    }
+    document.write(leng + " random integers :  " + array);
+    document.write("<br/>");
+    document.write("reverse sequence :  " + reversed);
+</script>
+</body>
+</html>

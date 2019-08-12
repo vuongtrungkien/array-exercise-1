@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <script>
+        let array = [];
+        let leng = parseInt(prompt("Enter the length"));
+        let i;
+        let cont = 0;
+
+
+        for (i = 0 ; i < leng; i++){
+            array[i] = Math.round(Math.random() * 100) - 20;
+            if (array[i] < 0) {
+                cont++;
+            }
+
+
+        }
+        document.write(leng +" random integers :  " + array);
+        document.write("<br/>");
+        document.write("There are "+ cont + " negative numbers");
+    </script>
+</body>
+</html>

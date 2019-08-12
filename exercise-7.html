@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7</title>
+</head>
+<body>
+    <script>
+        let array = [];
+        let i,j;
+
+        for (i = 0; i < 10; i++) {
+            array[i] = Math.round(Math.random()*10);
+        }
+        console.log(array);
+        let number = parseInt(prompt("Enter the number"));
+        for (i = 0; i < array.length; i++) {
+            if (number === array[i]) {
+                for (j = i;j < array.length - 1 ;j++ ) {
+                    array[j] = array[j + 1];
+                }
+                array[array.length -1 ] = 0;
+                i++;
+            }
+        }
+        document.write(array)
+    </script>
+</body>
+</html>

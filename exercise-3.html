@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3 </title>
+</head>
+<body>
+<script>
+    let array = [];
+    let sum = 0;
+    let max = 0;
+    let i;
+    for (i = 0; i < 10; i++) {
+        array[i] = Math.round(Math.random() * 50);
+        if (array[max] < array[i]) {
+            max = i;
+        }
+        sum += array[i];
+    }
+        let average = sum / i;
+    document.write(  + array);
+    document.write("<br/>");
+    document.write("Number max :  " + array[max] + " @ " + max);
+    document.write("<br/>");
+    document.write("average :  " + average );
+
+
+
+</script>
+</body>
+</html>

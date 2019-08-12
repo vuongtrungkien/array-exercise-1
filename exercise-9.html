@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 9</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let array2 = [];
+    let array3 = [];
+    let i, j;
+
+    for (i = 0; i < 10; i++) {
+        array[i] = Math.round(Math.random() * 20);
+        array2[i] = Math.round(Math.random() * 20);
+    }
+
+    let leng1 = array.length - 1;
+    let leng2 = array2.length;
+
+    for (i = 0; i < (leng1 + leng2); i++) {
+        array3[i] = array[i];
+        if (i > leng1) {
+            for (j = 0; j < leng2; j++) {
+                array3[i] = array2[j];
+                i++;
+            }
+        }
+    }
+
+
+    document.write("array 1 : " +array);
+    document.write("<br/>");
+    document.write("array 2 : " + array2);
+    document.write("<br/>");
+    document.write("array 3 =  array 1 connects array 2  : " + array3);
+
+
+</script>
+</body>
+</html>

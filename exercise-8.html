@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let i, j;
+
+    let number = parseInt(prompt("Enter the number"));
+    for (i = 0; i < number; i++) {
+        array[i] = Math.round(Math.random() * 10);
+    }
+
+
+    for (i = 0; i < array.length - 1; i++) {
+        for (j = array.length - 1; j > i; j--) {
+            if (array[j] > array[j - 1]) {
+                let max = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = max;
+            }
+        }
+    }
+    document.write(array);
+</script>
+</body>
+</html>
